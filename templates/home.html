@@ -162,7 +162,7 @@
     
     <header>
     
-        <form autocomplete="off" action="http://127.0.0.1:5000/search",method='get'>
+        <form autocomplete="off" action="{{url_for('search')}}",method='get'>
             <div class="autocomplete" style="width:600px;">
               <input id="myInput" type="text" name="Drug" placeholder="Enter the Drug Name" required="required">
               
