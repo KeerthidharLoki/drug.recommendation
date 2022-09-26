@@ -2,5 +2,5 @@ Flask
 pandas
 numpy
 sklearn
-gunicorn
+gunicorn==19.9.0
 heroku
