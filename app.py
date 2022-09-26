@@ -12,7 +12,7 @@ import pickle
 
 
 
-app = Flask(__name__)
+app=Flask(__name__)
 
 cosine_sim=pd.read_csv('E:\Projects\Drug\drug.recommendation\Files\cos_similarity.csv')
 main=pd.read_csv('E:\Projects\Drug\drug.recommendation\Files\main.csv')
