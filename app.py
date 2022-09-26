@@ -15,8 +15,8 @@ import pickle
 app=Flask(__name__)
 
 cosine_sim=pd.read_csv('cos_similarity.csv')
-main=pd.read_csv('E:\Projects\Drug\drug.recommendation\Files\main.csv')
-Reviews=pd.read_csv('E:\Projects\Drug\drug.recommendation\Files\Reviews.csv')
+main=pd.read_csv('main.csv')
+Reviews=pd.read_csv('Reviews.csv')
 
 def get_recommendations(title, cosine_sim=cosine_sim):
     # Get the index of the drug that matches the title
