@@ -1,5 +1,5 @@
 Flask
-pandas==0.19
+pandas
 numpy
 sklearn
 gunicorn==19.9.0

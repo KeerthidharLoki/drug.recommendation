@@ -14,7 +14,7 @@ import pickle
 
 app=Flask(__name__)
 
-cosine_sim=pd.read_csv('E:\Projects\Drug\drug.recommendation\Static\cos_similarity.csv')
+cosine_sim=pd.read_csv('cos_similarity.csv')
 main=pd.read_csv('E:\Projects\Drug\drug.recommendation\Files\main.csv')
 Reviews=pd.read_csv('E:\Projects\Drug\drug.recommendation\Files\Reviews.csv')
 
