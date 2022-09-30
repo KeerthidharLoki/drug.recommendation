@@ -285,39 +285,7 @@ autocomplete(document.getElementById("myInput"), countries)
       </form>
 
 
-      <section>
-        
-        
-        <article style="text-align:left">
-          <h1 style="text-align:left">{{drug}}</h1>
-          <p style="text-align:left;font-size: 25px;">Prescribed_for:{{pre}}</p>
-          <p style="text-align:left;font-size: 25px">User_Rating:{{ra}}</p>
-          <p style="text-align:left;font-size:25px;">Count_of_Reviews:{{co}}</p>
-        </article>
-      </section>
-      
-      <footer>
-        <p></p>
-      </footer>
-
-      
-      <div style="text-align:left;font-size: medium;max-height:600px;overflow-y: scroll;">
-        <table>
-            <h1>REVIEWS
-            <!--Displaying the converted table-->
-                 {% for table in rev %}
-                <h2>{{titles[loop.index]}}</h2>                            
-                {{ table|safe }}
-                {% endfor %}     
-            </h1> 
-        </table>
-    </div>
-
-
-    <footer>
-      <p>Similar Drugs</p>
-      {{prediction_text}}
-    </footer>
+     
         
       
 

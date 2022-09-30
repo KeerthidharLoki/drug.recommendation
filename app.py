@@ -79,7 +79,7 @@ def search():
     #fe=open('home.html','w')
     #fe.write(rev)
     #fe.close()
-    return render_template('home.html',prediction_text=output,drug=data,pre=pre,ra=ra,co=co,rev=[rev],titles=[''])
+    return render_template('recommend.html',prediction_text=output,drug=data,pre=pre,ra=ra,co=co,rev=[rev],titles=[''])
 
     
 
