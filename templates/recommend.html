@@ -290,17 +290,21 @@ autocomplete(document.getElementById("myInput"), countries)
           <p style="text-align:left;font-size: 25px;">Prescribed_for:{{pre}}</p>
           <p style="text-align:left;font-size: 25px">User_Rating:{{ra}}</p>
           <p style="text-align:left;font-size:25px;">Count_of_Reviews:{{co}}</p>
+          <h1>REVIEWS</h1>
         </article>
       </section>
       
       <footer>
-        <p></p>
+        <p>      </p>
+      </footer>
+      <footer>
+        <p>      </p>
       </footer>
 
       
       <div style="text-align:left;font-size: medium;max-height:600px;overflow-y: scroll;">
         <table>
-            <h1>REVIEWS
+            <h1>
             <!--Displaying the converted table-->
                  {% for table in rev %}
                 <h2>{{titles[loop.index]}}</h2>                            
