@@ -21,9 +21,10 @@ Reviews=pd.read_csv('Reviews.csv')
 def get_recommendations(title, cosine_sim=cosine_sim):
     # Get the index of the drug that matches the title
     idx=main.loc[main['DrugName']==title].index[0]
-    
     # Get the pairwsie similarity scores of all drugs with that drug
-    sim_scores =list(enumerate(cosine_sim.loc[idx]))
+    sim_scores =list((cosine_sim.iloc[idx]))
+    sim_scores.remove(idx)
+    sim_scores=list(enumerate(sim_scores))
     # Sort the drugs based on the similarity scores
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
     # Get the scores of the 10 most similar drugs
@@ -34,6 +35,7 @@ def get_recommendations(title, cosine_sim=cosine_sim):
     Drug_indices=main.iloc[Drug_indices][main['Count_of_Reviews']>67] .sort_values(by='User_Rating',ascending=False).index
     # Return the top 10 most similar drugs
     return main['DrugName'].iloc[Drug_indices]
+    #return sim_scores
 
 def prescribed(title):
 
