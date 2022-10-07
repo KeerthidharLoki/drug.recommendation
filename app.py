@@ -28,7 +28,7 @@ def get_recommendations(title, cosine_sim=cosine_sim):
     # Sort the drugs based on the similarity scores
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
     # Get the scores of the 10 most similar drugs
-    sim_scores = sim_scores[1:10]
+    sim_scores = sim_scores[1:30]
     # Get the drug indices
     Drug_indices = [i[0] for i in sim_scores]
      #Sorting again based on Review Rating and Count_of_Reviews
