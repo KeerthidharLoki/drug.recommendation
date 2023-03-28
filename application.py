@@ -1,6 +1,5 @@
 
 
-from unicodedata import name
 import numpy as np
 import pandas as pd
 from flask import Flask, render_template, request,jsonify
@@ -12,14 +11,14 @@ import pickle
 
 
 
-app=Flask(__name__)
+application =app=Flask(__name__)
 
 cosine_sim=pd.read_csv('cos_similarity.csv')
 main=pd.read_csv('main.csv')
 Reviews=pd.read_csv('Reviews.csv')
 
 def get_recommendations(title, cosine_sim=cosine_sim):
-    # Get the index of the drug that matches the title
+    # Get the index of the drug that matches ttitle
     idx=main.loc[main['DrugName']==title].index[0]
     # Get the pairwsie similarity scores of all drugs with that drug
     sim_scores =list((cosine_sim.iloc[idx]))
@@ -86,4 +85,4 @@ def search():
     
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host = "0.0.0.0")
