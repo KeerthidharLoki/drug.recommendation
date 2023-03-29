@@ -1,5 +1,5 @@
 {
     "require": {
-        "sklearn/sklearn"
+        "sklearn/sklearn": "1.02"
     }
 }
