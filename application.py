@@ -2,6 +2,7 @@
 
 import numpy as np
 import pandas as pd
+import sklearn
 from flask import Flask, render_template, request,jsonify
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
